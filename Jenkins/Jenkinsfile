@@ -57,7 +57,7 @@ pipeline {
                   accessKeyVariable: 'AWS_ACCESS_KEY_ID',
                   secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                   ]]) {
-                  sh "kubectl create namespace comingsoon"
+                  sh "kubectl create namespace coming-soon"
                 }
             }
         }
@@ -72,7 +72,7 @@ pipeline {
                   ]]) {
                   sh """
                   cd comingsoon/k8s
-                  kubectl -n comingsoon apply -f deployment.yaml
+                  kubectl -n coming-soon apply -f deployment.yaml
                  
                   """
                 }
